@@ -1,0 +1,226 @@
+
+
+/* 电竞赛区的css */
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    /* background: radial-gradient(ellipse at bottom, #1b2735, #090a0f); */
+}
+
+main {
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    background-image: radial-gradient(circle at center, #899dc4, #495d84);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(ellipse at bottom, #1b2735, #090a0f);
+    font-weight: 300;
+    flex-wrap: wrap;
+}
+
+
+.box {
+    display: flex;
+    transform: perspective(300px) rotateX(20deg);
+    perspective-origin: center center;
+    transition: all 1.3s ease-out;
+    transform-style: preserve-3d;
+}
+
+.box:hover {
+    perspective: 1000px;
+    transition: all 1.3s ease-in;
+    transform: perspective(10000px) rotateX(0deg);
+}
+.box:hover .text {
+    opacity: 1;
+}
+.box:hover>div {
+    opacity: 1;
+    transition-delay: 0s;
+} 
+.box:hover .explainer,
+.box:hover .explainer1,
+.box:hover .explainer2 {
+    opacity: 0;
+ }
+
+.left,
+.center,
+.right,
+.lefter,
+.righter {
+    width: 200px;
+    height: 350px;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transition-delay: 1s;
+    position: relative;
+
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-blend-mode: color-burn;
+}
+.text p {text-indent: 4em;}
+
+
+.text {
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    bottom: 0;
+    left: 5px;
+    position: absolute;
+    will-change: transform;
+    color: #fff;
+}
+
+.lefter {
+    transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
+    background-image: url(../瓦/chichoo.png);
+}
+.lefter2
+{
+    background-image: url(../瓦/BerLIN.png);
+}
+.lefter3
+{
+    background-image: url(../瓦/B3Ar.png);
+}
+
+.left {
+    opacity: 1;
+    transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
+    background-image: url(../瓦/nobody.png);
+}
+.left2
+{
+    background-image: url(../瓦/Life.png);
+}
+.left3 {
+    background-image: url(../瓦/Biank.png);
+}
+
+.center {
+    opacity: 1;
+    background-image: url(../瓦/kk.png);
+}
+.center2
+{
+    background-image: url(../瓦/AAAAY.png);
+}
+.center3
+{
+    background-image: url(../瓦/whzy.png);
+}
+
+.right {
+    opacity: 1;
+    transform: translateX(30px) translateZ(-25px) rotateY(5deg);
+    background-image: url(../瓦/smg.png);
+    
+}
+.right2
+{
+    background-image: url(../瓦/Lysoar.png);
+}
+.right3
+{
+    background-image: url(../瓦/yosemite.png);
+}
+
+.righter {
+    transform: translateX(60px) translateZ(-50px) rotateY(10deg);
+    
+    background-image: url(../瓦/浩东.png);
+}
+.righter2
+{
+    background-image: url(../瓦/autumn.png);
+}
+.righter3
+{
+    background-image: url(../瓦/Knight.png);
+}
+
+.explainer {
+    display: flex;
+    font-weight: 300;
+    font-size: 2rem;
+    color: #fff;
+    transition: all 0.6s ease;
+    width: 100%;
+    height: 100%;
+    background-color: #303050;
+    background-image: url(../瓦/edg.png);
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.explainer_fpx
+{
+    background-image: url(../瓦/fpl.png);
+}
+.explainer_blg
+{
+    background-image:url(../瓦/BLG.png) ;
+}
+.explainer_512
+{
+    background-image: url(../瓦/512.jpg);
+    background-size: 100%;
+}
+
+
+.explainer1 {
+    display: flex;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #fff;
+    transition: all 0.6s ease;
+    width: 100%;
+    height: 100%;
+    background-color: #303050;
+    
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.explainer2 {
+    display: flex;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #fff;
+    transition: all 0.6s ease;
+    width: 100%;
+    height: 100%;
+    background-color: #303050;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    justify-content: center;
+    align-items: center;
+}
