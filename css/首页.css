@@ -1,0 +1,246 @@
+video {
+    position: relative;
+    right: 0px;
+    bottom: 0px;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: 100%;
+    padding: 0;
+
+}
+
+source {
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+}
+
+#text {
+    font-size: 30px;
+    padding-top: 40px;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(15, 12, 12);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-x: hidden;
+    justify-content: center;
+}
+
+#text {
+    color: white;
+}
+
+#down {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+.box2 {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #191c29;
+    padding: 20px;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    perspective: 2500px;
+    margin: 0 50px;
+}
+
+.cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wrapper {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.card:hover .wrapper {
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.wrapper::before,
+.wrapper::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+}
+
+/* 前增阴影 */
+.wrapper::before {
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(to top, transparent 46%, rgba(12, 13, 19, 0.5) 68%, rgba(12, 13, 19) 97%);
+}
+
+/* 后增 */
+.wrapper::after {
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(to bottom, transparent 46%, rgba(12, 13, 19, 0.5) 68%, rgba(12, 13, 19) 97%);
+}
+
+.card:hover .wrapper::before,
+.wrapper::after {
+    opacity: 1;
+}
+
+.card:hover .wrapper::after {
+    height: 120px;
+}
+
+.title {
+    width: 100%;
+    transition: transform 0.5s;
+}
+
+.card:hover .title {
+    transform: translate3d(0%, -50px, 100px);
+}
+
+.character {
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+    text-indent: 5em;
+}
+
+.card:hover .character {
+    opacity: 1;
+    transform: translate3d(0%, -30%, 100px);
+}
+
+.box2 a div img {
+    width: 200px;
+}
+
+.box1 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 0px 0;
+    flex-wrap: wrap;
+    background-color: #d3750b;
+    margin-bottom: 30vh;
+    margin-top: 10vh;
+}
+.box11
+{
+    background-color: #02AA59;
+}
+
+.box {
+    position: relative;
+    width: 150vh;
+    height: 50vh;
+    transform-style: preserve-3d;
+    transition: all .4s;
+    margin: 0 auto;
+   
+
+}
+
+.box img {
+    width: 100%;
+    height: 120%;
+}
+
+.box text {
+    width: 70%;
+    height: 100%;
+
+}
+
+.front,
+.bottom {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.front {
+    display: flex;
+    background-color: rgb(70, 67, 67);
+    transform: translateZ(150px)
+}
+
+.front2{
+    display: flex;
+    background-color: rgb(14, 13, 13);
+    transform: translateZ(150px)
+}
+
+.bottom {
+    display: flex;
+    background-color: #d3750b;
+    transform: translateY(150px) rotateX(-90deg)
+}
+.bottom2
+{
+    background-color: #02AA59;
+}
+
+.box:hover {
+    transform: rotateX(90deg);
+}
+
+.right {
+    position: relative;
+    display: flex;
+    margin-top: 4%;
+    width: 70%;
+    height: 70%;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    padding: 20px;
+}
+
+.left {
+ width: 25%;
+    /* box-shadow: 0 0 20px 5px rgba(61, 61, 70, 0.4); */
+
+}
